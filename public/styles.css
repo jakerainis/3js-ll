@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+h2, ol {
+  list-style: none;
+  margin-left: 1rem;
+  margin-top: 1rem;;
+}
+
+li{
+  margin-bottom: .25rem;
+}
+
+a {
+  color: darkcyan;
+}
+
+a:hover{
+  color: teal
+}
+
+.webgl {
+  left: 0;
+  outline: none;
+  position: fixed;
+  top: 0;
+}
