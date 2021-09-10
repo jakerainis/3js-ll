@@ -41934,9 +41934,9 @@
 	  scene.add(mesh);
 
 	  // Camera
-	  const camera = new PerspectiveCamera(50, aspectRatio);
-	  camera.position.set(0, 0, 5);
-	  scene.add(camera);
+	  // const camera = new THREE.PerspectiveCamera(50, aspectRatio)
+	  // camera.position.set(0, 0, 5)
+	  // scene.add(camera)
 
 	  // Renderer
 	  const renderer = new WebGLRenderer({ canvas });
