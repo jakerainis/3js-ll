@@ -19,9 +19,9 @@ export default function Scene() {
   scene.add(mesh)
 
   // Camera
-  // const camera = new THREE.PerspectiveCamera(50, aspectRatio)
-  // camera.position.set(0, 0, 5)
-  // scene.add(camera)
+  const camera = new THREE.PerspectiveCamera(50, aspectRatio)
+  camera.position.set(0, 0, 5)
+  scene.add(camera)
 
   // Renderer
   const renderer = new THREE.WebGLRenderer({ canvas })
