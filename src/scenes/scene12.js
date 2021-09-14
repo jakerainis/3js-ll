@@ -8,15 +8,15 @@ export default function Scene() {
   const sizes = { width: window.innerWidth, height: window.innerHeight }
   const aspectRatio = sizes.width / sizes.height
   const scene = new THREE.Scene()
-  const cubeTextureLoader = new THREE.CubeTextureLoader()
 
   // Phsyics World
+  // https://en.wikipedia.org/wiki/Gravitational_acceleration
   const world = new CANNON.World()
   world.gravity.set(0, -9.82, 0) // -9.82 is earth's gravity
   world.broadphase = new CANNON.SAPBroadphase(world)
   world.allowSleep = true
 
-  //Phsyics Materials
+  //Phsyics Materials (these names are arbitrary)
   const concrete = new CANNON.Material('concrete')
   const plastic = new CANNON.Material('plastic')
   const concretePlasticContact = new CANNON.ContactMaterial(concrete, plastic, { friction: 0.2, restitution: 0.8 })

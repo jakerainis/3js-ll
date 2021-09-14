@@ -41924,7 +41924,7 @@
 	  const scene = new Scene$c();
 
 	  // Sphere
-	  const segments = 40;
+	  const segments = 20;
 	  const geometry = new SphereGeometry(1, segments, segments);
 	  const material = new MeshBasicMaterial({
 	    color: 'red',
@@ -41934,9 +41934,9 @@
 	  scene.add(mesh);
 
 	  // Camera
-	  // const camera = new THREE.PerspectiveCamera(50, aspectRatio)
-	  // camera.position.set(0, 0, 5)
-	  // scene.add(camera)
+	  const camera = new PerspectiveCamera(50, aspectRatio);
+	  camera.position.set(0, 0, 5);
+	  scene.add(camera);
 
 	  // Renderer
 	  const renderer = new WebGLRenderer({ canvas });
@@ -41944,8 +41944,8 @@
 
 	  // Animation
 	  const tick = () => {
-	    camera.position.x = Math.sin(cursor.x * Math.PI * 2) * Math.PI;
-	    camera.position.z = Math.cos(cursor.x * Math.PI * 2) * Math.PI;
+	    camera.position.x = Math.sin(cursor.x * Math.PI) * Math.PI;
+	    camera.position.z = Math.cos(cursor.x * Math.PI) * Math.PI;
 	    camera.position.y = cursor.y * 5;
 	    camera.lookAt(mesh.position);
 
@@ -45877,7 +45877,6 @@
 	  // Animation
 	  const tick = () => {
 	    controls.update();
-	    // spotlightHelper.update()
 	    renderer.render(scene, camera);
 	    window.requestAnimationFrame(tick);
 	  };
@@ -46001,7 +46000,7 @@
 	  const cubeTextureLoader = new CubeTextureLoader(loadingManager);
 
 	  // Material
-	  const pbr = 'rock'; // alien | rock | spaceship
+	  const pbr = 'alien'; // alien | rock | spaceship
 	  const material = new MeshStandardMaterial({
 	    // PBR
 	    aoMap: textureLoader.load(`/textures/${pbr}/ao.png`),
@@ -59853,15 +59852,15 @@
 	  const sizes = { width: window.innerWidth, height: window.innerHeight };
 	  const aspectRatio = sizes.width / sizes.height;
 	  const scene = new Scene$c();
-	  new CubeTextureLoader();
 
 	  // Phsyics World
+	  // https://en.wikipedia.org/wiki/Gravitational_acceleration
 	  const world = new World();
 	  world.gravity.set(0, -9.82, 0); // -9.82 is earth's gravity
 	  world.broadphase = new SAPBroadphase(world);
 	  world.allowSleep = true;
 
-	  //Phsyics Materials
+	  //Phsyics Materials (these names are arbitrary)
 	  const concrete = new Material('concrete');
 	  const plastic = new Material('plastic');
 	  const concretePlasticContact = new ContactMaterial(concrete, plastic, { friction: 0.2, restitution: 0.8 });

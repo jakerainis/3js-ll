@@ -9,7 +9,7 @@ export default function Scene() {
   const scene = new THREE.Scene()
 
   // Sphere
-  const segments = 40
+  const segments = 20
   const geometry = new THREE.SphereBufferGeometry(1, segments, segments)
   const material = new THREE.MeshBasicMaterial({
     color: 'red',
@@ -29,8 +29,8 @@ export default function Scene() {
 
   // Animation
   const tick = () => {
-    camera.position.x = Math.sin(cursor.x * Math.PI * 2) * Math.PI
-    camera.position.z = Math.cos(cursor.x * Math.PI * 2) * Math.PI
+    camera.position.x = Math.sin(cursor.x * Math.PI) * Math.PI
+    camera.position.z = Math.cos(cursor.x * Math.PI) * Math.PI
     camera.position.y = cursor.y * 5
     camera.lookAt(mesh.position)
 

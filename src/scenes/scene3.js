@@ -91,7 +91,6 @@ export default function Scene() {
   // Animation
   const tick = () => {
     controls.update()
-    // spotlightHelper.update()
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)
   }
