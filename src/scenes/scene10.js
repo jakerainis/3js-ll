@@ -12,7 +12,7 @@ export default function Scene() {
   //  Model
   let mixer
   const gltfLoader = new GLTFLoader()
-  gltfLoader.load('/models/Fox/glTF/Fox.gltf', (gltf) => {
+  gltfLoader.load('models/Fox/glTF/Fox.gltf', (gltf) => {
     mixer = new THREE.AnimationMixer(gltf.scene)
     const action = mixer.clipAction(gltf.animations[0])
     action.play()

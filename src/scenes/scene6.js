@@ -13,7 +13,7 @@ export default function Scene() {
   // Objects
   const geometry = new THREE.TorusBufferGeometry(0.3, 0.2, 20, 45)
   const material = new THREE.MeshMatcapMaterial({
-    matcap: textureLoader.load('/textures/matcaps/3.png'),
+    matcap: textureLoader.load('textures/matcaps/3.png'),
   })
 
   const donuts = []

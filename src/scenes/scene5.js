@@ -19,12 +19,12 @@ export default function Scene() {
   const pbr = 'rock' // alien | rock | spaceship
   const material = new THREE.MeshStandardMaterial({
     // PBR
-    aoMap: textureLoader.load(`/textures/${pbr}/ao.png`),
-    displacementMap: textureLoader.load(`/textures/${pbr}/height.png`),
-    map: textureLoader.load(`/textures/${pbr}/map.png`),
-    metalnessMap: textureLoader.load(`/textures/${pbr}/roughness.png`),
-    roughnessMap: textureLoader.load(`/textures/${pbr}/metalness.png`),
-    normalMap: textureLoader.load(`/textures/${pbr}/normal.png`),
+    aoMap: textureLoader.load(`textures/${pbr}/ao.png`),
+    displacementMap: textureLoader.load(`textures/${pbr}/height.png`),
+    map: textureLoader.load(`textures/${pbr}/map.png`),
+    metalnessMap: textureLoader.load(`textures/${pbr}/roughness.png`),
+    roughnessMap: textureLoader.load(`textures/${pbr}/metalness.png`),
+    normalMap: textureLoader.load(`textures/${pbr}/normal.png`),
 
     // Config
     displacementScale: 0,
@@ -38,12 +38,12 @@ export default function Scene() {
 
   // Env Map
   const envMap = cubeTextureLoader.load([
-    '/textures/environmentMaps/1/px.jpg',
-    '/textures/environmentMaps/1/nx.jpg',
-    '/textures/environmentMaps/1/py.jpg',
-    '/textures/environmentMaps/1/ny.jpg',
-    '/textures/environmentMaps/1/pz.jpg',
-    '/textures/environmentMaps/1/nz.jpg',
+    'textures/environmentMaps/1/px.jpg',
+    'textures/environmentMaps/1/nx.jpg',
+    'textures/environmentMaps/1/py.jpg',
+    'textures/environmentMaps/1/ny.jpg',
+    'textures/environmentMaps/1/pz.jpg',
+    'textures/environmentMaps/1/nz.jpg',
   ])
   material.envMap = envMap // Apply an environment map to the maeterial
   scene.background = envMap // Apply an environment map to the scene

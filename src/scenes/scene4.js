@@ -24,7 +24,7 @@ export default function Scene() {
   const sphereShadow = new THREE.Mesh(
     new THREE.PlaneBufferGeometry(1.5, 1.5),
     new THREE.MeshBasicMaterial({
-      alphaMap: textureLoader.load('/textures/shadows/simpleShadow.jpg'),
+      alphaMap: textureLoader.load('textures/shadows/simpleShadow.jpg'),
       color: 0x000000,
       transparent: true,
     })

@@ -45916,7 +45916,7 @@
 	  const sphereShadow = new Mesh(
 	    new PlaneGeometry(1.5, 1.5),
 	    new MeshBasicMaterial({
-	      alphaMap: textureLoader.load('/textures/shadows/simpleShadow.jpg'),
+	      alphaMap: textureLoader.load('textures/shadows/simpleShadow.jpg'),
 	      color: 0x000000,
 	      transparent: true,
 	    })
@@ -46000,15 +46000,15 @@
 	  const cubeTextureLoader = new CubeTextureLoader(loadingManager);
 
 	  // Material
-	  const pbr = 'alien'; // alien | rock | spaceship
+	  const pbr = 'rock'; // alien | rock | spaceship
 	  const material = new MeshStandardMaterial({
 	    // PBR
-	    aoMap: textureLoader.load(`/textures/${pbr}/ao.png`),
-	    displacementMap: textureLoader.load(`/textures/${pbr}/height.png`),
-	    map: textureLoader.load(`/textures/${pbr}/map.png`),
-	    metalnessMap: textureLoader.load(`/textures/${pbr}/roughness.png`),
-	    roughnessMap: textureLoader.load(`/textures/${pbr}/metalness.png`),
-	    normalMap: textureLoader.load(`/textures/${pbr}/normal.png`),
+	    aoMap: textureLoader.load(`textures/${pbr}/ao.png`),
+	    displacementMap: textureLoader.load(`textures/${pbr}/height.png`),
+	    map: textureLoader.load(`textures/${pbr}/map.png`),
+	    metalnessMap: textureLoader.load(`textures/${pbr}/roughness.png`),
+	    roughnessMap: textureLoader.load(`textures/${pbr}/metalness.png`),
+	    normalMap: textureLoader.load(`textures/${pbr}/normal.png`),
 
 	    // Config
 	    displacementScale: 0,
@@ -46022,12 +46022,12 @@
 
 	  // Env Map
 	  const envMap = cubeTextureLoader.load([
-	    '/textures/environmentMaps/1/px.jpg',
-	    '/textures/environmentMaps/1/nx.jpg',
-	    '/textures/environmentMaps/1/py.jpg',
-	    '/textures/environmentMaps/1/ny.jpg',
-	    '/textures/environmentMaps/1/pz.jpg',
-	    '/textures/environmentMaps/1/nz.jpg',
+	    'textures/environmentMaps/1/px.jpg',
+	    'textures/environmentMaps/1/nx.jpg',
+	    'textures/environmentMaps/1/py.jpg',
+	    'textures/environmentMaps/1/ny.jpg',
+	    'textures/environmentMaps/1/pz.jpg',
+	    'textures/environmentMaps/1/nz.jpg',
 	  ]);
 	  material.envMap = envMap; // Apply an environment map to the maeterial
 	  scene.background = envMap; // Apply an environment map to the scene
@@ -46101,7 +46101,7 @@
 	  // Objects
 	  const geometry = new TorusGeometry(0.3, 0.2, 20, 45);
 	  const material = new MeshMatcapMaterial({
-	    matcap: textureLoader.load('/textures/matcaps/3.png'),
+	    matcap: textureLoader.load('textures/matcaps/3.png'),
 	  });
 
 	  const donuts = [];
@@ -46442,10 +46442,10 @@
 	    new BoxGeometry(4, 2.5, 4),
 	    new MeshStandardMaterial({
 	      color: '#ac8e82',
-	      map: textureLoader.load('/textures/bricks/color.jpg'),
-	      aoMap: textureLoader.load('/textures/bricks/ambientOcclusion.jpg'),
-	      normalMap: textureLoader.load('/textures/bricks/normal.jpg'),
-	      roughnessMap: textureLoader.load('/textures/bricks/roughness.jpg'),
+	      map: textureLoader.load('textures/bricks/color.jpg'),
+	      aoMap: textureLoader.load('textures/bricks/ambientOcclusion.jpg'),
+	      normalMap: textureLoader.load('textures/bricks/normal.jpg'),
+	      roughnessMap: textureLoader.load('textures/bricks/roughness.jpg'),
 	      transparent: true,
 	    })
 	  );
@@ -46455,14 +46455,14 @@
 	  const door = new Mesh(
 	    new PlaneGeometry(2, 2, 100, 100),
 	    new MeshStandardMaterial({
-	      map: textureLoader.load('/textures/door/color.jpg'),
-	      alphaMap: textureLoader.load('/textures/door/alpha.jpg'),
-	      aoMap: textureLoader.load('/textures/door/ambientOcclusion.jpg'),
-	      displacementMap: textureLoader.load('/textures/door/height.jpg'),
+	      map: textureLoader.load('textures/door/color.jpg'),
+	      alphaMap: textureLoader.load('textures/door/alpha.jpg'),
+	      aoMap: textureLoader.load('textures/door/ambientOcclusion.jpg'),
+	      displacementMap: textureLoader.load('textures/door/height.jpg'),
 	      displacementScale: 0.1,
-	      metalnessMap: textureLoader.load('/textures/door/metalness.jpg'),
-	      normalMap: textureLoader.load('/textures/door/normal.jpg'),
-	      roughnessMap: textureLoader.load('/textures/door/roughness.jpg'),
+	      metalnessMap: textureLoader.load('textures/door/metalness.jpg'),
+	      normalMap: textureLoader.load('textures/door/normal.jpg'),
+	      roughnessMap: textureLoader.load('textures/door/roughness.jpg'),
 	      transparent: true,
 	    })
 	  );
@@ -50561,7 +50561,7 @@
 	  //  Model
 	  let mixer;
 	  const gltfLoader = new GLTFLoader();
-	  gltfLoader.load('/models/Fox/glTF/Fox.gltf', (gltf) => {
+	  gltfLoader.load('models/Fox/glTF/Fox.gltf', (gltf) => {
 	    mixer = new AnimationMixer(gltf.scene);
 	    const action = mixer.clipAction(gltf.animations[0]);
 	    action.play();

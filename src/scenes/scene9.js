@@ -75,10 +75,10 @@ export default function Scene() {
     new THREE.BoxBufferGeometry(4, 2.5, 4),
     new THREE.MeshStandardMaterial({
       color: '#ac8e82',
-      map: textureLoader.load('/textures/bricks/color.jpg'),
-      aoMap: textureLoader.load('/textures/bricks/ambientOcclusion.jpg'),
-      normalMap: textureLoader.load('/textures/bricks/normal.jpg'),
-      roughnessMap: textureLoader.load('/textures/bricks/roughness.jpg'),
+      map: textureLoader.load('textures/bricks/color.jpg'),
+      aoMap: textureLoader.load('textures/bricks/ambientOcclusion.jpg'),
+      normalMap: textureLoader.load('textures/bricks/normal.jpg'),
+      roughnessMap: textureLoader.load('textures/bricks/roughness.jpg'),
       transparent: true,
     })
   )
@@ -88,14 +88,14 @@ export default function Scene() {
   const door = new THREE.Mesh(
     new THREE.PlaneBufferGeometry(2, 2, 100, 100),
     new THREE.MeshStandardMaterial({
-      map: textureLoader.load('/textures/door/color.jpg'),
-      alphaMap: textureLoader.load('/textures/door/alpha.jpg'),
-      aoMap: textureLoader.load('/textures/door/ambientOcclusion.jpg'),
-      displacementMap: textureLoader.load('/textures/door/height.jpg'),
+      map: textureLoader.load('textures/door/color.jpg'),
+      alphaMap: textureLoader.load('textures/door/alpha.jpg'),
+      aoMap: textureLoader.load('textures/door/ambientOcclusion.jpg'),
+      displacementMap: textureLoader.load('textures/door/height.jpg'),
       displacementScale: 0.1,
-      metalnessMap: textureLoader.load('/textures/door/metalness.jpg'),
-      normalMap: textureLoader.load('/textures/door/normal.jpg'),
-      roughnessMap: textureLoader.load('/textures/door/roughness.jpg'),
+      metalnessMap: textureLoader.load('textures/door/metalness.jpg'),
+      normalMap: textureLoader.load('textures/door/normal.jpg'),
+      roughnessMap: textureLoader.load('textures/door/roughness.jpg'),
       transparent: true,
     })
   )
