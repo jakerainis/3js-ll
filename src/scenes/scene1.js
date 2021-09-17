@@ -9,7 +9,7 @@ export default function Scene() {
   const scene = new THREE.Scene()
 
   // Sphere
-  const segments = 20
+  const segments = 50
   const geometry = new THREE.SphereBufferGeometry(1, segments, segments)
   const material = new THREE.MeshBasicMaterial({
     color: 'red',

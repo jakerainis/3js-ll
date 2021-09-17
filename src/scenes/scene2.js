@@ -35,10 +35,6 @@ export default function Scene() {
   group.position.set(0, 0, 0)
   scene.add(group)
 
-  // Axes Helper
-  const axesHelper = new THREE.AxesHelper()
-  scene.add(axesHelper)
-
   // Camera
   const camera = new THREE.PerspectiveCamera(50, aspectRatio)
   camera.position.set(0, 0, 5)
