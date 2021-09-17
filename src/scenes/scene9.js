@@ -14,19 +14,19 @@ export default function Scene() {
   const textureLoader = new THREE.TextureLoader()
 
   // Ground
-  const groundColor = textureLoader.load('/textures/grass/color.jpg')
+  const groundColor = textureLoader.load('textures/grass/color.jpg')
   groundColor.repeat.set(8, 8)
   groundColor.wrapT = THREE.RepeatWrapping
   groundColor.wrapS = THREE.RepeatWrapping
-  const groundAmbientOcclusion = textureLoader.load('/textures/grass/ambientOcclusion.jpg')
+  const groundAmbientOcclusion = textureLoader.load('textures/grass/ambientOcclusion.jpg')
   groundAmbientOcclusion.repeat.set(8, 8)
   groundAmbientOcclusion.wrapT = THREE.RepeatWrapping
   groundAmbientOcclusion.wrapS = THREE.RepeatWrapping
-  const groundNormal = textureLoader.load('/textures/grass/normal.jpg')
+  const groundNormal = textureLoader.load('textures/grass/normal.jpg')
   groundNormal.repeat.set(8, 8)
   groundNormal.wrapT = THREE.RepeatWrapping
   groundNormal.wrapS = THREE.RepeatWrapping
-  const groundRoughness = textureLoader.load('/textures/grass/roughness.jpg')
+  const groundRoughness = textureLoader.load('textures/grass/roughness.jpg')
   groundRoughness.repeat.set(8, 8)
   groundRoughness.wrapT = THREE.RepeatWrapping
   groundRoughness.wrapS = THREE.RepeatWrapping
